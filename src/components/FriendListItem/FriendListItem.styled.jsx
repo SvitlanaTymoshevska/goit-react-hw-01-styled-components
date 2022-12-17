@@ -1,4 +1,6 @@
-.item {
+import styled from 'styled-components';
+
+export const Item = styled.li`
     display: flex;
     align-items: center;
     justify-content: left;
@@ -9,26 +11,22 @@
     margin-right: auto;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+`;
 
-.status {
+export const Status = styled.span`
     width: 20px;
     height: 20px;
-    background-color: red;
     border-radius: 50%;
-}
+    background-color: ${props => props.isOnline? "green": "red"};
+`;
 
-.status.isOnline {
-    background-color:green;
-}
+export const Avatar = styled.img`
+   margin-left: 16px;
+`;
 
-.avatar {
-    margin-left: 16px;
-}
-
-.name {
+export const Name = styled.p`
     margin-left: 16px;
     color: black;
     font-size: 28px;
     font-weight: bold;
-}
+`;

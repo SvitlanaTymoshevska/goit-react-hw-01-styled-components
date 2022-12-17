@@ -1,4 +1,6 @@
-.transactionHistory {
+import styled from 'styled-components';
+
+export const TransactionHistoryTable = styled.table`
     width: 100%;
     margin-top: 16px;
     margin-bottom: 20px;
@@ -6,25 +8,26 @@
     border: 1px solid darkgray;
     color: dimgray;
     font-size: 16px;
-}
+`;
 
-.transactionHistory th {
+export const TableTh = styled.th`
     padding: 16px;
     background:aqua;
     border: 1px solid darkgray;
     font-weight: bold;
-}
+`;
 
-.transactionHistory td {
+export const TableTd = styled.td`
     padding: 12px;
     border: 1px solid darkgray;
     text-align: center;
-}
+`;
 
-.transactionHistory tbody tr:nth-child(odd) {
-    background: #fff;
-}
-
-.transactionHistory tbody tr:nth-child(even) {
-    background: #efefef;
-}
+export const TableTr = styled.tr`
+    &:nth-child(odd){
+        background: #fff;
+    }
+    &:nth-child(even){
+        background: #efefef;
+    }
+`;
